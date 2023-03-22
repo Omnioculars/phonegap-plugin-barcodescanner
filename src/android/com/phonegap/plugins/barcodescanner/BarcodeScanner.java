@@ -24,7 +24,7 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PluginResult;
 import org.apache.cordova.PermissionHelper;
 
-import com.google.zxing.client.android.CaptureActivity;
+import com.google.zxing.client.android.XCaptureActivity;
 import com.google.zxing.client.android.encode.EncodeActivity;
 import com.google.zxing.client.android.Intents;
 
@@ -137,7 +137,7 @@ public class BarcodeScanner extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
 
-                Intent intentScan = new Intent(that.cordova.getActivity().getBaseContext(), CaptureActivity.class);
+                Intent intentScan = new Intent(that.cordova.getActivity().getBaseContext(), XCaptureActivity.class);
                 intentScan.setAction(Intents.Scan.ACTION);
                 intentScan.addCategory(Intent.CATEGORY_DEFAULT);
 
