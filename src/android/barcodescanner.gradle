@@ -6,7 +6,7 @@ repositories{
 }
 
 dependencies {
-    compile(name:'barcode-release', ext:'aar')
+    implementation(name:'barcode-release', ext:'aar')
 }
 
 android {
